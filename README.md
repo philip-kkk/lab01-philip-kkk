@@ -1,20 +1,46 @@
-# Study Assistant — starter
+# Study Assistant
 
-A starter repository for the CSC10014 Smart Virtual Assistant project.
+A starter rule-based assistant for the CSC10014 course.
 
 ## Setup
 
-TODO (Lab 1): write the exact steps a new teammate needs, from a fresh machine to
-running the app and the tests. Your partner will follow them without your help.
+Requirements: Python 3.10 or newer and Git.
+
+On Windows PowerShell:
+
+    py -m venv .venv
+    .\.venv\Scripts\Activate.ps1
+    python -m pip install -r requirements.txt
+    python -m pip install -e .
+
+On macOS or Linux:
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install -r requirements.txt
+    python -m pip install -e .
 
 ## Run
 
-TODO
+    python -m assistant "where is the IT helpdesk?"
+
+Expected output:
+
+    IT Helpdesk: room E.005, open Mon-Fri 08:00-17:00.
 
 ## Test
 
-TODO
+    python -m pytest -q
+
+Expected result:
+
+    4 passed
 
 ## Project structure
 
-TODO
+- `src/assistant/`: application source code
+- `tests/`: automated tests
+- `data/`: sample office data
+- `scripts/`: environment checking scripts
+- `docs/`: project documentation
+- `ui/`: user interface placeholder
